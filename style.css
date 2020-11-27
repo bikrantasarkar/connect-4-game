@@ -1,0 +1,19 @@
+#welcome
+{
+	color:#454543;
+	text-align: center;
+	margin-top:0.5%;
+}
+.dot {
+  height: 100px;
+  width: 100px;
+  background-color: #6e6e6e;
+  border-radius: 50%;
+  display: inline-block;
+  border: 4.5px solid black;
+}
+#matrix
+{	
+	margin-top:0.5%;
+	text-align: center;
+}
