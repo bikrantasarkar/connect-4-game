@@ -1,4 +1,4 @@
-var a = prompt("Player 1:Enter your name, you will be Blue");
+var a = prompt("Player 1:Enter your name, you will be yellow");
 var b = prompt("Player 2:Enter your name, you will be Red");
 var c=0;
 var start="on"
@@ -10,7 +10,7 @@ for (var i = 0; i < 35; i++)
  	console.log(ball[i]);
 }
 
-$("#name").text("Player 1: it is your turn, please pick a cloumn to drop your blue chip.");
+$("#name").text("Player 1: it is your turn, please pick a cloumn to drop your yellow chip.");
 $('.dot').click(function()
 {
 	
@@ -27,7 +27,7 @@ $('.dot').click(function()
 				{
 					if(ball[i]=="grey")
 					{
-						$("#name").text("Player 1: it is your turn, please pick a column to drop your blue chip.");
+						$("#name").text("Player 1: it is your turn, please pick a column to drop your yellow chip.");
 						$('.dot').eq(i).css("background-color","red");
 						ball[i]="red";
 						break;
@@ -42,8 +42,8 @@ $('.dot').click(function()
 					if(ball[i]=="grey")
 					{
 						$("#name").text("Player 2: it is your turn, please pick a column to drop your red chip.");
-						$('.dot').eq(i).css("background-color","blue");
-						ball[i]="blue";
+						$('.dot').eq(i).css("background-color","yellow");
+						ball[i]="yellow";
 						break;
 					}
 
@@ -77,14 +77,14 @@ $('.dot').click(function()
 
 function colorMatch(one,two,three,four)
 {
-	return(one === two && one === three && one === four && one !="grey"  && one !== undefined)
+	return(one === two && one === three && one === four && one !="grey"  && one !== undefined && one!==NaN)
 }
 
 function hor()
 {
 	for(var i=35;i>=0;i--)
 	{
-		if(colorMatch(ball[i],ball[i+1],ball[i+2],ball[i+3]))
+		if(colorMatch(ball[i],ball[i+1],ball[i+2],ball[i+3]) && i%7!=0 && (i+1)%7!=0 && (i+2)%7!=0 && (i+3)%7!=0)
 		{
 			console.log("Hori");
 			return true;
@@ -113,20 +113,22 @@ function ver()
 }
 
 function diaR()
-{
-	for(var i=35;i>=0;i--)
-	{
-		if(colorMatch(ball[i],ball[i-6],ball[i-12],ball[i-18]))
+{ 
+
+		for(var i=35;i>=0;i--)
 		{
-			console.log("diaR");
-			return true;
-		}
-		else
-		{
-			continue;
+			if(colorMatch(ball[i],ball[i-6],ball[i-12],ball[i-18]) && (i-6)%7!=0 && (i-12)%7!=0 && (i-18)%7!=0 && i%7!=0)
+			{
+				console.log("diaR");
+				return true;
+			}
+			else
+			{
+				continue;
+			}
 		}
 	}
-}
+	
 
 function diaL()
 {

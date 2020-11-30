@@ -1,6 +1,6 @@
 #welcome
 {
-	color:#454543;
+	color:#236584;
 	text-align: center;
 	margin-top:0.5%;
 }
@@ -11,9 +11,27 @@
   border-radius: 50%;
   display: inline-block;
   border: 4.5px solid black;
+
 }
 #matrix
 {	
 	margin-top:0.5%;
 	text-align: center;
+ background-color: #af4af4;
+ margin:1% 15% 5% 15%;
+ border-radius: 25px;
+ background-image: linear-gradient(#288ee0, black); 
+}
+#copyr
+{
+  
+}
+#full
+{
+  margin-top:0.5%;
+  text-align: center;
+ background-color: #d5dee6;
+ margin:1% 15% 2% 15%;
+ border-radius: 25px;
+
 }
