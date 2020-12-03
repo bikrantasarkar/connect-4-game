@@ -35,19 +35,25 @@
  border-radius: 25px;
 
 }
-img.one
+.one
 {
-  height: 2em;
-  width: auto;
+  height: 1.5em;
+  width:auto;
 }
-img.two
+.two
 {
   height: 2em;
   width: auto;
 }
 
-img.three
+.three
 {
   height: 2em;
   width: auto;
+}
+.copyright{
+font-size: 125%;
+color:#236584;
+font-style: italic;
+font-weight: 400;
 }
