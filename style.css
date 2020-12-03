@@ -24,7 +24,7 @@
 }
 #copyr
 {
-  
+  padding-left: 1%;
 }
 #full
 {
@@ -34,4 +34,20 @@
  margin:1% 5% 2% 5%;
  border-radius: 25px;
 
+}
+img.one
+{
+  height: 2em;
+  width: auto;
+}
+img.two
+{
+  height: 2em;
+  width: auto;
+}
+
+img.three
+{
+  height: 2em;
+  width: auto;
 }
